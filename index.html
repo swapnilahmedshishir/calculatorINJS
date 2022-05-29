@@ -13,35 +13,42 @@
 
    <div id="main_div">
     <div class="input-div">
-        <input class="input_value">
+        <input class="input_value" value="" id="result_value" onclick="display()">
     </div>
     <div class="value_style">
         <div class="digit_div">
-            <span class="span_text">7</span>
-            <span class="span_text">8</span>
-            <span class="span_text">9</span>
-            <span class="span_text">x</span>
+            <button onclick="deleteBtn()" class="span_text">DEL</button>
+            <!-- <button class="span_text">(</button>
+            <button class="span_text">)</button> -->
 
         </div>
-        <div class="digit_div">
-            <span class="span_text">4</span>
-            <span class="span_text">5</span>
-            <span class="span_text">6</span>
-            <span class="span_text">/</span>
+
+        <div class="digit_div" id="digit1_row_div">
+
+            <input type="button" onclick="digit('7')" class="span_text" value="7" >
+            <input type="button" onclick="digit('8')" class="span_text" value="8">
+            <input type="button" onclick="digit('9')" class="span_text" value="9">
+            <input type="button" onclick="digit('*')" class="span_text operator" value="*">
+        </div>
+        <div class="digit_div" id="digit2_row_div">
+            <input type="button" onclick="digit('4')" class="span_text" value="4">
+            <input type="button" onclick="digit('5')" class="span_text" value="5">
+            <input type="button" onclick="digit('6')" class="span_text" value="6">
+            <input type="button" onclick="digit('/')" class="span_text operator" value="/">
                     
         </div>
       
-       <div class="digit_div">
-            <span class="span_text">1</span>
-            <span class="span_text">2</span>
-            <span class="span_text">3</span>
-            <span class="span_text">-</span>
+       <div class="digit_div" id="digit3_row_div">
+        <input type="button" onclick="digit('1')" class="span_text" value="1">
+        <input type="button" onclick="digit('2')" class="span_text" value="2">
+        <input type="button" onclick="digit('3')" class="span_text" value="3">
+        <input type="button" onclick="digit('-')" class="span_text operator" value="-">
        </div>
-       <div class="digit_div">
-            <span class="span_text">0</span>
-            <span class="span_text">.</span>
-            <span class="span_text equal_digit">=</span>
-            <span class="span_text">+</span>
+       <div class="digit_div" id="digit4_row_div">
+        <input type="button" onclick="digit('0')" class="span_text" value="0">
+        <input type="button" onclick="digit('.')" class="span_text" value=".">
+        <input type="button" onclick="resultBtn()" class="span_text equal_digit" value="=">
+        <input type="button" onclick="digit('+')" class="span_text operator" value="+">
        </div>
        
        
@@ -56,7 +63,8 @@
     
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
 </body>
 </html>
